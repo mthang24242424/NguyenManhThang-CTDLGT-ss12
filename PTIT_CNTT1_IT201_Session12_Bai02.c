@@ -14,16 +14,12 @@ Node* createNode(int data) {
     return newNode;
 }
 void printList(Node* head) {
-    printf("NULL <-");
+    int count = 1;
     while (head != NULL) {
-        if (head->next == NULL) {
-            printf(" %d -> ",head->data);
-        }else {
-            printf(" %d <-->",head->data);
-        }
+        printf("data %d: %d\n",count,head->data);
+        count++;
         head = head->next;
     }
-    printf("NULL\n");
 }
 int main(void) {
     Node* head = createNode(1);
